@@ -829,3 +829,7 @@ defmodule Rockelivery do
   defdelegate create_user(params), to: UserCreate, as: :call
 end
 ```
+
+## Criando a rota de criação de usuários pt 2
+
+Adicionamos o `with` no UserController para validar os cenários por pattern matching. Se, não tratar o erro especificamente, devolvemos esse erro para quem chamou. Senão, tratamos no `else`.
